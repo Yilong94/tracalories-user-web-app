@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="background">
+  <div class="background-image">
+  	<div class="background-overlay">
+  		<div class="menu">
+  			<div class="title">Seng Kee Chicken Rice</div>
+  			<table style="width:100%;margin:0;border:2px solid #262626">
+  				<thead>
+  					<tr>
+  						<th></th>
+  						<th></th>
+  						<th></th>
+  						<th></th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  				{% for item in items %}
+	  				<tr class="clickable-row" data-href="{{ url_for('confirm', id=loop.index) }}">
+	  					<td style="width:30%"><img height="100" width="100" style="margin:auto;display:block;" src={{ item[0] }}></td>
+	  					<td style="width:30%"><div class="menuwords">{{ item[1] }}</div> </td>
+	  					<td style="width:20%"><div class="menuwords">${{ '%0.2f'|format(item[2]) }}</div> </td>
+	  					<td style="width:20%"><div class="menuwords">{{ item[3] }} Calories</div> </td>
+	  				</tr>
+  				{% endfor %}
+  				</tbody>
+  				
+  			</table>
+  		</div>
+  	</div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scriptbottom %}
+<script type="text/javascript">
+// javascript function for making the whole table row clickable
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
+});
+</script>
+{% endblock %}
+

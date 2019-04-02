@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div id="mainbody">
+  <div class="background">
+    <div class="background-image">
+      <div id="outdiv">
+        <video id="v" autoplay></video>
+      </div>
+      <div id="result"></div>
+    </div>
+  </div>
+</div>
+
+<canvas id="qr-canvas" width="800" height="600" style="width: 800px; height: 600px;"></canvas>
+
+{% endblock %}
+
+{% block scriptbottom %}
+<script type="text/javascript">load("{{url_for('menu')}}");</script>
+{% endblock %}

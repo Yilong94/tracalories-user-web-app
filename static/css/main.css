@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+
+.background{
+  width: 100%;
+  height: 350px;
+  position:relative;
+}
+
+.background-image{
+  height: 100%;
+  position:relative;
+  background:   url(/static/img/veg_lowres.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.button-box{
+  height: 30%;
+  width:40%;
+  top: 50%;
+  left: 47.5%;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  background-color:white;
+  opacity:0.7;
+  text-align: center;
+}
+
+.title{
+  /*height:60%;*/
+  width:100%;
+  color: black;
+  text-align:center;
+  font-size: 40px;
+  font-family:'Aladin';
+}
+
+#outdiv
+{
+  width:360px;
+  height:270px;
+  border: solid;
+  border-width: 3px 3px 3px 3px;
+  margin: 0 auto;
+  top:50%;
+  left:50%;
+  position:absolute;
+  transform: translate(-50%, -50%);
+}
+
+#v{
+    width:360px;
+    height:270px;
+}
+
+#qr-canvas{
+  display:none;
+}
+
+.background-overlay{
+  width:87%;
+  height:80%;
+  top:50%;
+  left: 50%;
+  position:absolute;
+  transform: translate(-50%, -50%);
+  background-color: #e6e6e6;
+}
+
+.menu{
+  margin: 20px;
+  height:100%;
+}
+
+.menuwords{
+  font-size:16px;
+  font-family: :'Times New Roman';
+  text-align: center;
+}
+
+thead, tbody { display: block; }
+
+tbody {
+    height: 170px;
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+td {
+  padding-bottom: 10px;
+}
+
+.iteminfo-overlay{
+  width:40%;
+  height:20%;
+  top:80%;
+  left: 50%;
+  position:absolute;
+  transform: translate(-50%, -20%);
+  border:1px solid #262626;
+}

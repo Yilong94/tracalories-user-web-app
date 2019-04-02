@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="background">
+  <div class="background-image">
+    <div class="background-overlay">
+        <div style="border:1px solid #000000;width:96%;height:93%;margin:0 auto;position: relative;top: 50%;transform: translateY(-50%);" >
+          <div class="title" style="margin-top:20px;">Transaction is underway...</div>
+          <img id="icon" style="width:150px;height:150px;margin:auto;display:block;" src="/static/img/dollar.png">
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scriptbottom %}
+<script type="text/javascript">
+$(document).ready(function(){
+  setTimeout(function(){
+    icon = document.getElementById("icon")
+    icon.src = '/static/img/checked.png'
+  }, 5000);
+});
+
+</script>
+{% endblock %}
